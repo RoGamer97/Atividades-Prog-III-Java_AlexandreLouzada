@@ -1,8 +1,8 @@
-package dominio;
+package controle;
 
 import java.util.Scanner;
 
-public class Calculadora 
+public class Calculadora
 {
 	public static void main(String[] args) 
 	{
@@ -15,14 +15,27 @@ public class Calculadora
 		int num2 = sc.nextInt();
 		
 		System.out.print("Digite a operação (+, -, *, /): ");
-		char op = sc.next();
+		String op = sc.next();
 		
 		switch (op)
 		{
-		case '+':
-			System.out.print(num1 + " + " num2 + " = " + (num1 + num2));
+		case "+":
+			System.out.print(num1 + " + " + num2 + " = " + (num1 + num2));
+			break;
+		case "-":
+			System.out.print(num1 + " - " + num2 + " = " + (num1 - num2));
+			break;
+		case "/":
+			while (num2 == 0)
+			{
+				System.out.print("Não é possivel dividir por zero! Digite outro número: ");
+				num2 = sc.nextInt();
+			}
+			System.out.print(num1 + " / " + num2 + " = " + (num1 / num2));
+			break;
+		case "*":
+			System.out.print(num1 + " x " + num2 + " = " + (num1 * num2));
 			break;
 		}
-		INCOMPLETO SEM TEMPO TENHO Q IR
-	}	
+	}
 }
