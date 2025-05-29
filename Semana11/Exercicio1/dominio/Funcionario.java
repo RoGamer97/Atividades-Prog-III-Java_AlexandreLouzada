@@ -21,14 +21,4 @@ public class Funcionario
 	{
 		return salarioBase;
 	}
-	
-	public void setNome(String nome)
-	{
-		this.nome = nome;
-	}
-	
-	public void setSalarioBase(double salarioBase)
-	{
-		this.salarioBase = salarioBase;
-	}
 }
