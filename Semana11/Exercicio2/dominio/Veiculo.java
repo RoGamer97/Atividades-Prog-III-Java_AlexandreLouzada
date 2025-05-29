@@ -28,21 +28,6 @@ public class Veiculo
 		return ano;
 	}
 	
-	public void setMarca(String marca)
-	{
-		this.marca = marca;
-	}
-	
-	public void setModelo(String modelo)
-	{
-		this.modelo = modelo;
-	}
-	
-	public void setAno(int ano)
-	{
-		this.ano = ano;
-	}
-	
 	public void exibirDados()
 	{
 		System.out.println("Marca: " + getMarca() + "\n Modelo: " + getModelo() + "\nAno: " + getAno());
