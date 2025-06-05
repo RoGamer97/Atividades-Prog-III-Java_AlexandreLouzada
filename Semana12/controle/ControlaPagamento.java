@@ -5,8 +5,8 @@ public class ControlaPagamento
 {
 	public static void main(String[] args)
 	{
-		BoletoBancario boleto = new BoletoBancario(500);
-		CartaoCredito cartao = new CartaoCredito(1000);
+		Pagamento boleto = new BoletoBancario(500);
+		Pagamento cartao = new CartaoCredito(1000);
 		
 		boleto.realizarPagamento(100);
 		cartao.realizarPagamento(30);
