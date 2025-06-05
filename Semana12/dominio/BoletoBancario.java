@@ -1,15 +1,27 @@
 package dominio;
 
-public class BoletoBancario extends Pagamento
+public class BoletoBancario implements Pagamento
 {	
-	public BoletoBancario(double valor)
+	private double valor;
+	
+	public BoletoBancario(double valor) 
 	{
-		super(valor);
+        this.valor = valor;
+    }
+	
+	public void realizarPagamento(double valor)
+	{
+		this.valor += valor;
+	}
+	
+	public double getValor()
+	{
+		return valor;
 	}
 	
 	@Override
 	public void exibirPagamento()
 	{
-		System.out.printf("Pagamento de R$ %.2f realizado com Boleto Bancário.\n", getValor());
+		System.out.printf("Pagamento de R$ %.2f realizado com Boleto Bancário.\n", valor);
 	}
 }
