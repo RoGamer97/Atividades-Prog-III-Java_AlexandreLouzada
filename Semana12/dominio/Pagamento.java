@@ -1,26 +1,8 @@
 package dominio;
 
-public class Pagamento 
+public interface Pagamento 
 {
-	protected double valor;
-	
-	public Pagamento(double valor)
-	{
-		this.valor = valor;
-	}
-	
-	public void realizarPagamento(double valor)
-	{
-		this.valor += valor;
-	}
-	
-	public void exibirPagamento()
-	{
-		System.out.println("Mensagem padrão de pagamento");
-	}
-	
-	public double getValor()
-	{
-		return valor;
-	}
+    void realizarPagamento(double valor);
+    void exibirPagamento();
+    double getValor();
 }
